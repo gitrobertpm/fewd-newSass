@@ -3,3 +3,7 @@
 *.int
 *.lk
 *.zip
+*.db
+.sass-cache
+node_modules
+

@@ -1,0 +1,97 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+
+// Text colors
+$white : #fff;
+$black : #000;
+$grey  : #808080;
+
+// Theme colors
+
+$fountain-blue  : #52bab3;
+$emerald        : #5ece7f;
+$sunglo         : #e67478;
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+$casablanca     : #F6C64C;
+$fern           : #5DB679;
+
+// Color Usage
+
+$color-primary   : $fountain-blue;
+$color-secondary : $scooter;
+$color-accent    : $emerald;
+
+// Grid
+
+$g-col-count    : 12;
+$g-cont-max-w   : 1200px;
+
+// Text
+
+$base__font-size : 16px;
+
+// Border radius
+
+$br--round      : 50%;
+
+// Breakpoints
+
+$brkpoint--md    : 768px;
+
+// Title logo
+
+$logo__vertical-margins: 4em;
+
+// Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		light  	 : lighten($grey, 30%),
+	  base     : $grey,
+	 	dark     : darken($grey, 15%),
+	),
+	black: (
+		base     : $black,
+	),
+	white: (
+	  base     : $white,
+	)
+);
+
+// Grid Colors
+
+$poly-grid: (
+	12 : lighten($fountain-blue, 30%),
+	8  : lighten($emerald, 30%),
+	7  : lighten($coral, 30%),
+	6  : lighten($purple-majesty , 30%),
+	4  : lighten($sunglo, 30%),
+	5  : lighten($fountain-blue, 30%),
+	2  : lighten($fern, 30%),
+	3  : lighten($casablanca, 30%),
+);
+
+// UI Colors
+
+$ui-colors: (
+	default : $fountain-blue,
+	success : $emerald,
+	error   : $sunglo,
+	warning : $coral,
+	info    : $purple-majesty
+);

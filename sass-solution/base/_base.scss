@@ -1,0 +1,25 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+@import url($font-url--google);
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Lists
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+p {
+	margin: em(14px, 18px);
+	font-weight: $font-weight--light;
+	font-size: em(18px);
+	line-height: (27px/18px);
+}

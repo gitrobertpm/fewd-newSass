@@ -1,0 +1,38 @@
+// ==========================================================================
+// Typography Styles
+// ==========================================================================
+
+.container {
+  @include flexy($dist: flex, $dir: column, $just: space-between);
+	padding: em(14px, 18px);
+	color: palette(grey);
+  font-family: $font-family--primary;
+  max-width: $g-cont-max-w;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.link {
+  @extend %link;
+}
+
+.blockquote {
+  font-weight: $font-weight--light;
+	font-style : italic;
+	font-size : em(26px);
+	@include mq(medium) {
+		padding: 0 0 0 5%;
+		border-left: em(8px, 24px) solid palette(grey, light);
+	}
+}
+
+.headline {
+	@include m(primary) {
+		@extend %headline;
+		font-size: em(32px);
+	  margin-top: 0;
+	}
+	@include m(secondary) {
+		@extend %headline;
+	}
+}

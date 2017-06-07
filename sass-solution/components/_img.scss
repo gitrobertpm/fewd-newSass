@@ -1,0 +1,18 @@
+// ==========================================================================
+// Images
+// ==========================================================================
+
+.img {
+	@include m(logo) {
+		@extend %img;
+	}
+	@include m(frame) {
+		@extend %img;
+		border: 1px solid palette(grey, light);
+		padding: em(14px, 18px);
+	}
+	@include m(avatar) {
+		@extend %img;
+		border-radius: $br--round;
+	}
+}

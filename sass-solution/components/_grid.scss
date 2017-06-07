@@ -1,0 +1,31 @@
+// ==========================================================================
+// Grid Columns
+// ==========================================================================
+
+[class*="grid"] {
+	margin: em(14px, 18px)/2 0;
+	padding: em(14px, 18px);
+	@include mq(medium) {
+		@include flexy($dist: flex, $dir: row, $just: space-around);
+		margin: em(14px, 18px)/2;
+	}
+}
+
+.grid {
+	@include e(col) {
+		@include colors($poly-grid);
+	}
+	@include mq(medium) {
+		@include e(col) {
+			@for $i from 1 through $g-col-count {
+				@include m($i) {
+					width: 100%  * ($i / $g-col-count);
+				}
+			}
+		}
+	}
+}
+
+.centered {
+	@extend %centered;
+}

@@ -1,0 +1,47 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+	&__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin flexy($dist: null, $dir: null, $width: null, $wrap: null, $grow: null, $just: null) {
+   display: $dist;
+   flex-direction: $dir;
+   flex-wrap: $wrap;
+	 flex-grow: 0;
+	 width: $width;
+	 justify-content: $just;
+}
+
+// Media queries
+
+@mixin colors($color-map) {
+  @each $theme, $color in $color-map {
+      @include m($theme) {
+				&.theme__poly {
+        background-color: $color;
+			}
+    }
+  }
+}
+
+@mixin mq($break) {
+  @if $break == "medium" {
+    @media (min-width: $brkpoint--md) {
+      @content;
+    }
+  } @else {
+   	@error "No value could be retrieved for `#{$break}`. "
+  }
+}
